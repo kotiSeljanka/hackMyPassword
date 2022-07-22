@@ -1,0 +1,85 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(60deg, red, gold) fixed;
+}
+
+.containerMain {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20em;
+}
+
+
+
+
+/*/// CODES ///*/
+.inputCode {
+    letter-spacing: 2em;
+    text-indent: 2em;
+}
+
+
+
+/*/// INPUT ///*/
+.containerInput {
+    display: flex;
+    gap: 1em;
+}
+.inputField {
+    font-size: 50px;
+    max-width: 5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+/*/// MATCHES ///*/
+.containerMatches {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    margin: 0.5em;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.matchesChild {
+    flex: 1;
+    flex-basis: 40%;
+}
+.containerAnswer {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+
+    opacity: 1;    
+    animation: tileAppearing 3s ease-out;
+}
+.containerAnswers {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.answerInput{
+    font-weight: bold;
+    font-size: 3em;
+}
+
+@keyframes tileAppearing {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+    5% {
+        height: max-content;
+    }
+    100% {
+        opacity: 1;
+    }
+}
